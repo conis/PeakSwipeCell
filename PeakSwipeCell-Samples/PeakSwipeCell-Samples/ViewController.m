@@ -65,16 +65,16 @@ static NSInteger kTagRemove = 102;
 #pragma mark PeakSwipeCell的委托
 -(BOOL) peakSwipeCell:(PeakSwipeCell *)cell swipeShouldBeginWithDirection:(PeakSwipeDirection)direction{
   //只允许向右划动
-  return direction == PeakSwipeToRight;
+  return direction == PeakSwipeDirectionRight;
 }
 
 -(BOOL) peakSwipeCell:(PeakSwipeCell *)cell swipingWithDirection:(PeakSwipeDirection)direction length:(CGFloat)length{
-  if(direction == PeakSwipeToRight){
+  if(direction == PeakSwipeDirectionRight){
     UIView *view = [cell.rightPanel viewWithTag: kTagRemove];
     [cell followSwipe:view length:length direction:direction offset: -10];
   }
   
-  return direction == PeakSwipeToRight;
+  return direction == PeakSwipeDirectionRight;
 }
 
 -(void) peakSwipeCell:(PeakSwipeCell *)cell swipeDidFinish:(PeakSwipeDirection)direction length:(CGFloat)length{
