@@ -184,12 +184,18 @@
 //划动中
 -(void) swiping: (CGPoint) point location: (CGPoint) location{
   CGFloat length = fabs(point.x);
+  PeakSwipeDirection direction = [self gestureDirection:point.x];
+  
+  //请问委托是否可以继续划动
+  if(self.delegate && [self.delegate respondsToSelector:@selector(peakSwipeCell:swipingWithDirection:length:)]){
+    if(![self.delegate peakSwipeCell:self swipingWithDirection:direction length:length]) return;
+  }
   //移动contentPanel
   self.bodyPanel.center = CGPointMake(self.dragStart + point.x, self.bodyPanel.center.y);
   
   //判断显示哪一个层
   [self swiping: length
-      direction:[self gestureDirection:point.x]
+      direction:direction
      availRange:[self inMaxRange:location]];
 }
 
@@ -246,7 +252,9 @@
 
 //结束划动
 -(void) swiped:(CGFloat)length direction:(PeakSwipeDirection)direction availRange:(BOOL)availRange{
-  //不做任何处理
+  if(self.delegate && [self.delegate respondsToSelector:@selector(peakSwipeCell:swipeDidFinish:length:)]){
+    [self.delegate peakSwipeCell:self swipeDidFinish:direction length:length];
+  }
 }
 
 //获取划动的方向
@@ -275,6 +283,9 @@
 
 //是否能划动开始，子类重载处理
 -(BOOL) swipeShouldBegin:(CGFloat)length direction:(PeakSwipeDirection)direction{
+  if(self.delegate && [self.delegate respondsToSelector:@selector(peakSwipeCell:swipeShouldBeginWithDirection:)]){
+    return [self.delegate peakSwipeCell:self swipeShouldBeginWithDirection:direction];
+  }
   return YES;
 }
 

@@ -81,5 +81,9 @@ typedef enum {
 @protocol PeakSwipeCellDelegate <NSObject>
 //点击
 -(void) peakSwipeCellDidTap: (PeakSwipeCell *) cell;
-//划动结束
+//将要朝某个方向划动
+-(BOOL) peakSwipeCell: (PeakSwipeCell *) cell swipeShouldBeginWithDirection: (PeakSwipeDirection) direction;
+//划动中
+-(BOOL) peakSwipeCell: (PeakSwipeCell *) cell swipingWithDirection: (PeakSwipeDirection) direction length: (CGFloat) length;
+-(void) peakSwipeCell: (PeakSwipeCell *) cell swipeDidFinish: (PeakSwipeDirection) direction length: (CGFloat) length;
 @end
