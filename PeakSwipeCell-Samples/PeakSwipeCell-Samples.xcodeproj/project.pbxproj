@@ -26,6 +26,7 @@
 		D2712AF917E4A24000CD0261 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D2712AF817E4A24000CD0261 /* Podfile */; };
 		D2712AFD17E4AD1500CD0261 /* remove_25.png in Resources */ = {isa = PBXBuildFile; fileRef = D2712AFB17E4AD1500CD0261 /* remove_25.png */; };
 		D2712AFE17E4AD1500CD0261 /* remove_25@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2712AFC17E4AD1500CD0261 /* remove_25@2x.png */; };
+		D2712B0017E4B2E700CD0261 /* PeakForm.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D2712AFF17E4B2E700CD0261 /* PeakForm.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		D2712AF817E4A24000CD0261 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		D2712AFB17E4AD1500CD0261 /* remove_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = remove_25.png; sourceTree = "<group>"; };
 		D2712AFC17E4AD1500CD0261 /* remove_25@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "remove_25@2x.png"; sourceTree = "<group>"; };
+		D2712AFF17E4B2E700CD0261 /* PeakForm.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PeakForm.podspec; path = ../../PeakForm.podspec; sourceTree = "<group>"; };
 		F6182C254E394A589DF27C3C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 		D2712AC517E4A01800CD0261 /* PeakSwipeCell-Samples */ = {
 			isa = PBXGroup;
 			children = (
+				D2712AFF17E4B2E700CD0261 /* PeakForm.podspec */,
 				D2712AFA17E4AD1500CD0261 /* res */,
 				D2712AF817E4A24000CD0261 /* Podfile */,
 				D2712ACE17E4A01800CD0261 /* AppDelegate.h */,
@@ -267,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2712B0017E4B2E700CD0261 /* PeakForm.podspec in Resources */,
 				D2712AD817E4A01800CD0261 /* Images.xcassets in Resources */,
 				D2712AFD17E4AD1500CD0261 /* remove_25.png in Resources */,
 				D2712ACA17E4A01800CD0261 /* InfoPlist.strings in Resources */,
